@@ -4,7 +4,6 @@ dotenv.config();
 
 //new database api object
 const databaseAPI = {
-  apiKey: process.env['REST_DB_KEY'],
   url: 'https://dbaccess-c342.restdb.io/rest/names',
   config: {
     headers: {
