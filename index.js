@@ -1,6 +1,5 @@
 import express from 'express';
 const app = express();
-import sqlite3 from 'sqlite3';
 import axios from 'axios';
 
 
