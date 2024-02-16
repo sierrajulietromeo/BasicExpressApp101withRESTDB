@@ -1,19 +1,13 @@
 import express from 'express';
 const app = express();
 import axios from 'axios';
-
+//new
+import databaseAPI from './model/database.js';
 
 
 app.set('view engine', 'pug'); // Set the view engine to Pug
 app.use(express.urlencoded({ extended: true })); // Set up middleware for parsing POST requests
 app.use(express.static('public')); // Serve static files from the 'public' directory
-
-//new
-app.use(express.json());
-
-//new
-import databaseAPI from './model/database.js';
-
 
 
 app.get('/', function (req, res) {
@@ -36,7 +30,7 @@ app.get('/chuck-norris', async function(req, res) {
 });
 
 
-// Route for rendering the list of names in descending order
+// Route for rendering the list of names 
 app.get('/list', async (req, res) => {
   try {
     const items = await databaseAPI.read();
